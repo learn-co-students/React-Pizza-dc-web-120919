@@ -8,15 +8,15 @@
     },
     {
       "id": 2,
-      "topping": "Pepperoni",
+      "topping": "Pepperoni and Pineapple",
       "size": "Small",
       "vegetarian": false
     },
     {
       "id": 3,
-      "topping": "Mushroom and Spinach",
-      "size": "Medium",
-      "vegetarian": true
+      "topping": "Mushroom, Spinach and Bacon",
+      "size": "Large",
+      "vegetarian": false
     },
     {
       "id": 4,
