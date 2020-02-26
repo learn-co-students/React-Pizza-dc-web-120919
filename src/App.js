@@ -43,7 +43,12 @@ class App extends Component {
     .then(pizza => this.addEditedPizza(pizza))
   }
   addEditedPizza(pizza) { 
-    this.setState([...this.state.pizzaArray, pizza])
+    let findPizza = this.state.pizzaArray.find(pie => pie.name === pizza.name)
+    let index = this.state.pizzaArray.indexOf(findPizza)
+    let copyArray = [...this.state.pizzaArray]
+    copyArray.splice(index, 1, pizza)
+   
+    this.setState({pizzaArray: copyArray })
   }
   render() {
     return (
