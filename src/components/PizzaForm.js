@@ -1,8 +1,6 @@
 import React from "react"
 
 const PizzaForm = (props) => {
-  console.log(props.editThisPizza)
-
 
   let handleChangedInputs = (event) => {
     console.log(event.target.value)

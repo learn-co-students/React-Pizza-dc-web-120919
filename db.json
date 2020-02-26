@@ -3,7 +3,7 @@
     {
       "id": 1,
       "topping": "Plain",
-      "size": "Large",
+      "size": "Medium",
       "vegetarian": true
     },
     {
@@ -14,8 +14,8 @@
     },
     {
       "id": 3,
-      "topping": "Mushroom",
-      "size": "Small",
+      "topping": "Mushroom and Spinach",
+      "size": "Medium",
       "vegetarian": true
     },
     {

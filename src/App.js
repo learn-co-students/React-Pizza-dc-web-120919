@@ -32,16 +32,20 @@ class App extends Component {
   }
 
   updatePizza = (info, event) => {
+    let allPizza = [...this.state.pizzas]
     let currentPizza = {...this.state.editPizza}
     if (event.target.type === "radio"){
       info = (event.target.value === "Not Vegetarian" && event.target.checked === true) ? false : true
     }
     currentPizza[event.target.name] = info
-    this.setState({editPizza: currentPizza})
+    allPizza.splice(allPizza.findIndex(pizza => currentPizza.id === pizza.id), 1, currentPizza)
+    // debugger
+    this.setState({pizzas: allPizza, editPizza: currentPizza})
     console.log("checking assumptions ", currentPizza)
+    console.log(this.state.editPizza)
   }
 
-  submitHandler = () => {
+  submitHandler = (event) => {
     let updatedPizza = this.state.editPizza
     let updatedBody = {topping: updatedPizza.topping,
       size: updatedPizza.size,
